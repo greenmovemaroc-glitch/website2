@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-<link rel="canonical" href="https://greenmovemaroc.com/attestation.html">
-<meta name="description" content="Simulateur CO₂ Green Move Maroc : estimez les émissions évitées pour vos déplacements avec chauffeur privé hybride/électrique et générez une attestation PDF.">
-<title>Simulateur CO₂ & Attestation — Green Move Maroc</title>
-  
-
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Attestation de Réduction d’Empreinte Carbone — Green Move Maroc</title>
+<title>Simulateur CO₂ & Attestation — Green Move Maroc</title>
+<meta name="description" content="Simulateur CO₂ Green Move Maroc : estimez les émissions évitées pour vos déplacements avec chauffeur privé hybride/électrique et générez une attestation PDF.">
+<link rel="canonical" href="https://greenmovemaroc.com/attestation.html">
+<link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Simulateur CO₂ & Attestation — Green Move Maroc">
+<meta property="og:description" content="Calculez vos émissions évitées et téléchargez une attestation PDF pour vos déplacements professionnels avec chauffeur privé.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:locale" content="fr_MA">
 <style>
   :root { --emerald:#059669; --slate:#0f172a; }
   * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
@@ -30,7 +33,11 @@
   .bar-slate { background:#64748b; height: 18px; border-radius: 9999px; }
 </style>
 </head>
-<body class="py-8">
+<body class="py-6">
+  <nav class="no-print a4 mx-auto px-4 mb-2 text-sm">
+    <a href="index.html?utm_source=attestation&utm_medium=breadcrumb&utm_campaign=simu_co2" class="text-emerald-700 hover:underline">← Retour au site</a>
+  </nav>
+
   <main class="a4 mx-auto bg-white card border rounded-3xl shadow-xl">
     <header class="flex items-center justify-between px-10 pt-10">
       <div class="flex items-center gap-3">
@@ -44,8 +51,8 @@
     </header>
 
     <section class="px-10 mt-6">
-      <h1 class="text-3xl font-extrabold tracking-tight text-emerald-600">Attestation de Réduction d’Empreinte Carbone</h1>
-      <p class="text-slate-600 mt-2">Document officiel attestant la réduction d’émissions de CO₂ réalisée grâce à l’utilisation d’un véhicule hybride/électrique avec chauffeur.</p>
+      <h1 class="text-3xl font-extrabold tracking-tight text-emerald-600">Simulateur CO₂ & Attestation de Réduction</h1>
+      <p class="text-slate-600 mt-2">Calculez les émissions évitées grâce à nos véhicules hybrides/électriques avec chauffeur, puis générez une attestation PDF pour vos dossiers RSE et déplacements professionnels.</p>
     </section>
 
     <section class="px-10 mt-6 grid grid-cols-2 gap-6 text-sm">
@@ -72,18 +79,22 @@
       <div class="grid grid-cols-2 gap-3">
         <div>
           <label class="block text-slate-600 mb-1">Facteur thermique (kg CO₂ / km)</label>
-          <input id="fTherm" class="w-full border rounded-xl px-3 py-2" type="number" step="0.001" value="0.192" title="Moyenne essence ~0,192 kgCO2/km (modifiables)">
+          <input id="fTherm" class="w-full border rounded-xl px-3 py-2" type="number" step="0.001" value="0.192" title="Moyenne essence ~0,192 kg CO₂/km (modifiables)">
         </div>
         <div>
           <label class="block text-slate-600 mb-1">Facteur Green Move (kg CO₂ / km)</label>
-          <input id="fGreen" class="w-full border rounded-xl px-3 py-2" type="number" step="0.001" value="0.050" title="Estimation hybride/électrique ~0,050 kgCO2/km (modifiables)">
+          <input id="fGreen" class="w-full border rounded-xl px-3 py-2" type="number" step="0.001" value="0.050" title="Estimation hybride/électrique ~0,050 kg CO₂/km (modifiables)">
         </div>
       </div>
     </section>
 
     <section class="px-10 mt-6">
-      <button class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-600 text-white" onclick="compute()">→ Calculer & générer</button>
-      <button class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-2xl border ml-2" onclick="window.print()">🖨️ Imprimer / PDF</button>
+      <div class="flex flex-wrap items-center gap-2 no-print">
+        <button class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-600 text-white" onclick="compute()">→ Calculer & générer</button>
+        <button class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl border" onclick="window.print()">🖨️ Imprimer / PDF</button>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl border" href="index.html#booking?utm_source=attestation&utm_medium=cta&utm_campaign=simu_co2">📅 Réserver un chauffeur</a>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl border" target="_blank" rel="noreferrer" href="https://wa.me/212615030750?text=Bonjour%20Green%20Move%20Maroc%2C%20je%20souhaite%20r%C3%A9server%20un%20chauffeur.%20%28depuis%20simulateur%20CO2%29&utm_source=attestation&utm_medium=whatsapp&utm_campaign=simu_co2">📱 WhatsApp</a>
+      </div>
 
       <div id="attestation" class="mt-6 border rounded-2xl p-6 bg-emerald-50/30 hidden">
         <p class="text-slate-700 leading-7">
@@ -117,12 +128,8 @@
             <span class="text-slate-600">Comparatif d’émissions</span>
             <span class="text-slate-500">(kg CO₂)</span>
           </div>
-          <div class="bar-bg">
-            <div id="barTherm" class="bar-slate" style="width: 60%"></div>
-          </div>
-          <div class="mt-2 bar-bg">
-            <div id="barGreen" class="bar-emerald" style="width: 20%"></div>
-          </div>
+          <div class="bar-bg"><div id="barTherm" class="bar-slate" style="width: 60%"></div></div>
+          <div class="mt-2 bar-bg"><div id="barGreen" class="bar-emerald" style="width: 20%"></div></div>
         </div>
 
         <p class="text-[11px] text-slate-500 mt-4 leading-relaxed">
@@ -144,7 +151,21 @@
         </div>
       </div>
     </section>
-    <div class="h-8"></div>
+
+    <section class="no-print px-10 py-8">
+      <div class="rounded-2xl border p-6 bg-emerald-50/40 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="max-w-xl">
+          <h2 class="text-lg font-bold tracking-tight">Besoin d’un chauffeur pour votre prochain déplacement ?</h2>
+          <p class="text-slate-600">Réservez votre chauffeur avec voiture (hybride/électrique) pour vos déplacements professionnels ou événements. Service premium, ponctuel et écoresponsable.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <a href="index.html#booking?utm_source=attestation&utm_medium=cta_box&utm_campaign=simu_co2" class="inline-flex items-center px-5 py-3 rounded-2xl bg-emerald-600 text-white">Réserver maintenant</a>
+          <a href="https://wa.me/212615030750?utm_source=attestation&utm_medium=whatsapp_box&utm_campaign=simu_co2" target="_blank" rel="noreferrer" class="inline-flex items-center px-5 py-3 rounded-2xl border">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-2"></div>
   </main>
 
 <script>
@@ -167,7 +188,7 @@ function compute() {
   document.getElementById('oDate2').textContent = new Date(d).toLocaleDateString('fr-FR');
   document.getElementById('oFrom').textContent = from;
   document.getElementById('oTo').textContent = to;
-  document.getElementById('oKm').textContent = km.toFixed(1);
+  document.getElementById('oKm').textContent = km ? km.toFixed(1) : '0.0';
 
   document.getElementById('oTherm').textContent = eT.toFixed(2);
   document.getElementById('oGreen').textContent = eG.toFixed(2);
