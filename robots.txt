@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://greenmovemaroc.com/sitemap.xml
